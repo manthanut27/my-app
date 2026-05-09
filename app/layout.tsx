@@ -30,6 +30,9 @@ const inter = Inter({
 
 // ── Default OG metadata (overridden per page) ─────────────────────────────
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+  ),
   title: 'StackAudit — AI Spend Audit Tool',
   description:
     'Know exactly what you\'re overpaying for AI tools — and what to do about it. Free, no login required.',

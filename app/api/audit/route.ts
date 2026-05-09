@@ -4,12 +4,6 @@ import { runAudit } from '../../../lib/audit/auditEngine'
 import { createServerClient } from '../../../lib/supabase/server'
 
 export async function POST(req: NextRequest) {
-  // TEMPORARY DEBUG — remove after confirming env vars
-  console.log('ENV CHECK:', {
-    url: process.env.NEXT_PUBLIC_SUPABASE_URL,
-    serviceKey: process.env.SUPABASE_SERVICE_ROLE_KEY ? 'EXISTS' : 'MISSING',
-  })
-
   // 1. Parse and validate request body
   let body: unknown
   try {

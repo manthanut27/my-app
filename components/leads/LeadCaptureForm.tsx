@@ -98,6 +98,7 @@ export default function LeadCaptureForm({ auditId, totalMonthlySavings }: LeadCa
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@company.com"
+          suppressHydrationWarning={true}
           className="w-full bg-[#0A0A0A] border border-[#1F1F1F] text-on-surface font-body-sm px-4 py-3 focus:outline-none focus:border-primary-container rounded-none transition-colors placeholder:text-surface-bright"
         />
       </div>

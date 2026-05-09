@@ -23,7 +23,10 @@ async function getAudit(id: string): Promise<AuditData | null> {
   try {
     const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'
     const res = await fetch(`${baseUrl}/api/audit/${id}`, {
-      cache: 'no-store',
+      // Audit rows are immutable — safe to cache within a render cycle.
+      // Default (force-cache) enables Next.js automatic fetch deduplication:
+      // generateMetadata + AuditResultsPage share one network request.
+      cache: 'force-cache',
     })
     if (!res.ok) return null
     return res.json()
