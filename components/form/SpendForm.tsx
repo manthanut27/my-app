@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import ToolRow from './ToolRow'
 import UseCaseSelector from './UseCaseSelector'
 import type { ToolInput, UseCaseType } from '../../types/audit'
+import type { ToolId } from '../../types/tools'
 
 const STORAGE_KEY = 'stackaudit_form'
 
