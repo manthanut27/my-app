@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
 import type { Metadata } from 'next'
 import AuditHero from '../../../components/results/AuditHero'
 import AISummary from '../../../components/results/AISummary'
@@ -144,7 +145,7 @@ export default async function AuditResultsPage({
 
         {/* New audit link */}
         <div className="flex justify-center">
-          <a
+          <Link
             href="/"
             className="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-2 uppercase"
           >
@@ -152,7 +153,7 @@ export default async function AuditResultsPage({
               arrow_back
             </span>
             Start a new audit
-          </a>
+          </Link>
         </div>
       </div>
 

@@ -39,7 +39,7 @@ export default function HomePage() {
         </h1>
 
         <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10 relative z-10">
-          Paste in your tools and plans. Get an instant audit of where you're
+          Paste in your tools and plans. Get an instant audit of where you&apos;re
           overpaying — and exactly what to do about it.
         </p>
 

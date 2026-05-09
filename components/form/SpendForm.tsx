@@ -4,9 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import ToolRow from './ToolRow'
 import UseCaseSelector from './UseCaseSelector'
-import type { ToolInput } from '../../types/audit'
-import type { UseCaseType } from '../../types/audit'
-import type { ToolId } from '../../types/tools'
+import type { ToolInput, UseCaseType } from '../../types/audit'
 
 const STORAGE_KEY = 'stackaudit_form'
 
@@ -26,22 +24,20 @@ const DEFAULT_STATE: FormState = {
 
 export default function SpendForm() {
   const router = useRouter()
-  const [state, setState] = useState<FormState>(DEFAULT_STATE)
+  const [state, setState] = useState<FormState>(() => {
+    if (typeof window === 'undefined') return DEFAULT_STATE
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY)
+      if (saved) return JSON.parse(saved) as FormState
+    } catch {
+      // ignore
+    }
+    return DEFAULT_STATE
+  })
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
-  // Load from localStorage on mount
-  useEffect(() => {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY)
-      if (saved) {
-        const parsed = JSON.parse(saved) as FormState
-        setState(parsed)
-      }
-    } catch {
-      // Silently ignore parse errors
-    }
-  }, [])
+
 
   // Persist to localStorage on every state change
   useEffect(() => {

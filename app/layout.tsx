@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { Syne, JetBrains_Mono, Inter, Geist } from 'next/font/google'
 import './globals.css'
 import { cn } from "@/lib/utils";
@@ -81,17 +82,17 @@ export default function RootLayout({
         {/* ── Site Header ─────────────────────────────────────────────── */}
         <header className="bg-surface border-b border-outline-variant flex justify-between items-center w-full px-6 h-16 max-w-[1440px] mx-auto z-50 sticky top-0">
           <div className="flex items-center gap-4">
-            <a href="/" className="font-headline-md text-headline-md tracking-tighter text-on-surface uppercase hover:text-primary-container transition-colors">
+            <Link href="/" className="font-headline-md text-headline-md tracking-tighter text-on-surface uppercase hover:text-primary-container transition-colors">
               StackAudit
-            </a>
+            </Link>
           </div>
           <div className="flex items-center">
-            <a
+            <Link
               href="/#audit-form"
               className="bg-primary-container text-surface px-4 py-2 font-label-caps text-label-caps rounded-none hover:bg-primary-fixed-dim transition-colors uppercase tracking-widest font-bold"
             >
               Run Audit
-            </a>
+            </Link>
           </div>
         </header>
 

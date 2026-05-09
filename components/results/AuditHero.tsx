@@ -33,7 +33,7 @@ export default function AuditHero({
                 $0
               </h1>
               <p className="font-body-sm text-body-sm text-on-surface-variant">
-                You're already spending well on your AI stack
+                You&apos;re already spending well on your AI stack
               </p>
             </>
           ) : (
