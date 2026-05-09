@@ -21,19 +21,24 @@ export default function CredexCTA() {
           </p>
         </div>
         <a
-          href="https://credex.in"
+          href="https://credex.rocks"
           target="_blank"
           rel="noopener noreferrer"
           id="credex-cta-btn"
-          className="flex-shrink-0 px-6 py-3 bg-primary-container text-black font-label-caps text-label-caps uppercase hover:bg-primary-fixed-dim transition-colors inline-flex items-center gap-2 whitespace-nowrap"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-[#00FF88] text-[#0A0A0A] font-mono font-bold text-sm uppercase tracking-wider hover:bg-white transition-colors flex-shrink-0 whitespace-nowrap"
         >
-          Book a Credex Consultation
-          <span
-            className="material-symbols-outlined text-[16px]"
-            style={{ fontVariationSettings: "'FILL' 0" }}
+          FINANCE WITH CREDEX
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
           >
-            arrow_forward
-          </span>
+            <line x1="7" y1="17" x2="17" y2="7" />
+            <polyline points="7 7 17 7 17 17" />
+          </svg>
         </a>
       </div>
     </div>
