@@ -9,19 +9,24 @@ on:
 jobs:
   lint-and-test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: my-app/package-lock.json
+          cache-dependency-path: package-lock.json
+
       - name: Install dependencies
         run: npm ci
-        working-directory: my-app
-      - name: Lint
-        run: npm run lint
-        working-directory: my-app
-      - name: Test
+
+      - name: Run lint
+        run: npx eslint . --ext .ts,.tsx
+
+      - name: Run tests
         run: npm run test
-        working-directory: my-app
