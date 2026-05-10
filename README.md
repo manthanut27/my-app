@@ -22,7 +22,7 @@ Built as Round 1 submission for Credex Web Development Internship.
 ### Audit Results Page
 ![Results Page](public/screenshots/results.png)
 
-*(Add 30-second Loom recording link here before submission)*
+[▶ Watch 30-second demo](https://www.loom.com/share/5948c637e9f1485aba4a4209e8cc3557)
 
 ---
 
