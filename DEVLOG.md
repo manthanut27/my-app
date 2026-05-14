@@ -201,3 +201,27 @@ None. Submitted.
 
 **Plan for tomorrow:**
 Wait for Round 2 notification.
+
+## Day 7 — 2026-05-12
+
+**Hours worked:** 1
+
+**What I did:**
+Final pre-submission review. Verified live URL is reachable at
+https://my-app-tawny-alpha-22.vercel.app. Confirmed all 12 markdown
+files are present at repo root. Re-verified PRICING_DATA.md entries
+are current. CI green on latest commit. Posted about StackAudit on
+LinkedIn to drive real users to the tool.
+
+**What I learned:**
+Shipping something real and getting actual user feedback — even from
+3 friends over WhatsApp — changes how you think about the product.
+Swayam's comment about spend confidence (not just spend size) being
+the real pain point was something I wouldn't have arrived at by
+thinking alone.
+
+**Blockers / what I'm stuck on:**
+None. Submission complete.
+
+**Plan for tomorrow:**
+Final commit. Wait for Round 2 notification.
